@@ -1,0 +1,10 @@
+
+J
+java:S1604*"(Make this anonymous inner class a lambda(â‘ë¤ÿÿÿÿÿ8®ôíª1
+t	java:S116"SRename this field "old_pass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ¬äùÿÿÿÿ8¯ôíª1
+m	java:S116"QRename this field "mk_moi" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôô”¤8¯ôíª1
+q	java:S116"URename this field "chek_mkmoi" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôô”¤8¯ôíª1
+E
+java:S1659"(Declare "chek_mkmoi" on a separate line.(ôô”¤8¶ôíª1
+F
+java:S1659"$Declare "btnhuy" on a separate line.(†ÓŒäüÿÿÿÿ8¶ôíª1

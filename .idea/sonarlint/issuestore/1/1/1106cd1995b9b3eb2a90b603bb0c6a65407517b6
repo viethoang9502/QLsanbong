@@ -1,0 +1,32 @@
+
+E
+java:S16047"(Make this anonymous inner class a lambda(–¾…İ8åóíª1
+E
+java:S1604["(Make this anonymous inner class a lambda(·¯İÏ8æóíª1
+F
+java:S1604"(Make this anonymous inner class a lambda(ÑØ™Ï8æóíª1
+J
+java:S1604N"(Make this anonymous inner class a lambda(¹†Ë’øÿÿÿÿ8æóíª1
+€
+java:S1488¬"]Immediately return this expression instead of assigning it to the temporary variable "bytes".(òüÿÿÿÿÿ8æóíª1
+~	java:S116#"]Rename this field "adapterListView_nv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ†Õ»ıÿÿÿÿ8òóíª1
+A
+java:S1659%"$Declare "loaitk" on a separate line.(‘“à©8ôóíª1
+x
+java:S1450!"VRemove the "floatCs" field and declare it as a local variable in the relevant methods.(ïŠ’Åüÿÿÿÿ8õóíª1
+Y
+java:S1854i"<Remove this useless assignment to local variable "regexStr".(Õú§ÿ8üóíª1
+X	java:S125a"<This block of commented-out lines of code should be removed.(™öë8üóíª1
+J
+java:S1481i"-Remove this unused "regexStr" local variable.(Õú§ÿ8ıóíª1
+M
+java:S6035^"0Replace this alternation with a character class.(Óª˜‡8ÿóíª1
+M
+java:S6035_"0Replace this alternation with a character class.(€‘ÆÆ8ÿóíª1
+R
+java:S6035`"0Replace this alternation with a character class.( ·Éøÿÿÿÿ8ÿóíª1
+^	java:S125€"<This block of commented-out lines of code should be removed.(ı‡Ç”ùÿÿÿÿ8€ôíª1
+F	java:S108›")Either remove or fill this block of code.(ÈŞøÍ8€ôíª1
+p	java:S100§"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ÿÊ²şÿÿÿÿ8ôíª1
+q
+java:S5843^"TSimplify this regular expression to reduce its complexity from 21 to the 20 allowed.(Óª˜‡8ƒôíª1
