@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".ui.activity.ThemHoaDonActivity">
+    tools:context=".database.ui.activity.ThemHoaDonActivity">
 
     <TextView
         android:layout_width="match_parent"

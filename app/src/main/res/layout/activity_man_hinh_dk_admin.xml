@@ -7,7 +7,7 @@
     android:paddingLeft="25dp"
     android:paddingRight="25dp"
     android:gravity="center"
-    tools:context=".ui.admin.AdminActivity">
+    tools:context=".database.ui.admin.AdminActivity">
 
 
 
