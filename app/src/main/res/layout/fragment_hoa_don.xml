@@ -5,20 +5,23 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".database.ui.Fragment.admin.DSNhanVienFragment">
+
     <TextView
-        android:background="@drawable/shape_background_item2"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Danh sách Hóa Đơn "
-        android:textSize="30sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
 
-        android:textAlignment="center"
-        android:paddingTop="15dp"
-        android:textStyle="italic"
-        android:layout_margin="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_background_item2"
         android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:text="Danh sách Phiếu đặt sân "
+        android:textAlignment="center"
         android:textColor="@color/black"
-        />
+        android:textSize="30sp"
+        android:textStyle="italic" />
     <LinearLayout
         android:weightSum="6"
         android:layout_marginTop="75dp"
