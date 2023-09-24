@@ -42,7 +42,7 @@ import vhoang.qlsanbong.myapp.database.ApplicationDatabase;
 import vhoang.qlsanbong.myapp.util.GsonUtils;
 
 public class
-ThemHoaDonActivity extends AppCompatActivity {
+ThemPhieuDatSan extends AppCompatActivity {
     //wexrdfgvhbuinuytvrerxctyvbun
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
     int myear, mmonth, mday;
@@ -144,8 +144,8 @@ ThemHoaDonActivity extends AppCompatActivity {
                 @Override
                 public void afterTextChanged(Editable editable) {
                     listsan.clear();
-                    List<PhieuDatSan> datSan = ApplicationDatabase.getInstance(ThemHoaDonActivity.this).dao_phieudatsan().getSanTrong(listkhunggio.get(spnkhunggio.getSelectedItemPosition()).getKhunggio(), edtngaythue.getText().toString());
-                    List<San> san = ApplicationDatabase.getInstance(ThemHoaDonActivity.this).dao_san().getAllSan();
+                    List<PhieuDatSan> datSan = ApplicationDatabase.getInstance(ThemPhieuDatSan.this).dao_phieudatsan().getSanTrong(listkhunggio.get(spnkhunggio.getSelectedItemPosition()).getKhunggio(), edtngaythue.getText().toString());
+                    List<San> san = ApplicationDatabase.getInstance(ThemPhieuDatSan.this).dao_san().getAllSan();
                     for (San item : san) {
                         item.setTrangthai2(false);  // Đặt trạng thái ban đầu thành false
 
@@ -160,7 +160,7 @@ ThemHoaDonActivity extends AppCompatActivity {
                             listsan.add(item);
                         }
                     }
-                    SimpleAdapter sanAdapter = new SimpleAdapter(ThemHoaDonActivity.this, getDSSan(), android.R.layout.simple_list_item_1, new String[]{"tensan"}, new int[]{android.R.id.text1});
+                    SimpleAdapter sanAdapter = new SimpleAdapter(ThemPhieuDatSan.this, getDSSan(), android.R.layout.simple_list_item_1, new String[]{"tensan"}, new int[]{android.R.id.text1});
                     spntensan.setAdapter(sanAdapter);
                     sanAdapter.notifyDataSetChanged();
                 }
@@ -173,8 +173,8 @@ ThemHoaDonActivity extends AppCompatActivity {
                         position = spnkhunggio.getSelectedItemPosition();
                     }
                     listsan.clear();
-                    List<PhieuDatSan> datSan = ApplicationDatabase.getInstance(ThemHoaDonActivity.this).dao_phieudatsan().getSanTrong(listkhunggio.get(position).getKhunggio(), edtngaythue.getText().toString());
-                    List<San> san = ApplicationDatabase.getInstance(ThemHoaDonActivity.this).dao_san().getAllSan();
+                    List<PhieuDatSan> datSan = ApplicationDatabase.getInstance(ThemPhieuDatSan.this).dao_phieudatsan().getSanTrong(listkhunggio.get(position).getKhunggio(), edtngaythue.getText().toString());
+                    List<San> san = ApplicationDatabase.getInstance(ThemPhieuDatSan.this).dao_san().getAllSan();
 
                     for (San item : san) {
                         item.setTrangthai2(false);  // Đặt trạng thái ban đầu thành false
@@ -190,7 +190,7 @@ ThemHoaDonActivity extends AppCompatActivity {
                             listsan.add(item);
                         }
                     }
-                    SimpleAdapter sanAdapter = new SimpleAdapter(ThemHoaDonActivity.this, getDSSan(), android.R.layout.simple_list_item_1, new String[]{"tensan"}, new int[]{android.R.id.text1});
+                    SimpleAdapter sanAdapter = new SimpleAdapter(ThemPhieuDatSan.this, getDSSan(), android.R.layout.simple_list_item_1, new String[]{"tensan"}, new int[]{android.R.id.text1});
                     spntensan.setAdapter(sanAdapter);
                     sanAdapter.notifyDataSetChanged();
                 }
@@ -207,7 +207,7 @@ ThemHoaDonActivity extends AppCompatActivity {
                     myear = calendar.get(Calendar.YEAR);
                     mmonth = calendar.get(Calendar.MONTH);
                     mday = calendar.get(Calendar.DAY_OF_MONTH);
-                    DatePickerDialog dialog = new DatePickerDialog(ThemHoaDonActivity.this
+                    DatePickerDialog dialog = new DatePickerDialog(ThemPhieuDatSan.this
                             , 0, mdatetungay, myear, mmonth, mday);
                     dialog.show();
                 }
@@ -279,35 +279,35 @@ ThemHoaDonActivity extends AppCompatActivity {
                         listhoadon = (ArrayList<PhieuDatSan>) ApplicationDatabase.getInstance(getApplicationContext()).dao_phieudatsan().checkadd(tensan, edtngay, khunggio);
                         if (listhoadon.isEmpty()) {
                             if (getDSKhungGio().size() == 0) {
-                                Toast.makeText(ThemHoaDonActivity.this, "Bạn Cần Thiết Lập Khung Giờ Trước", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ThemPhieuDatSan.this, "Bạn Cần Thiết Lập Khung Giờ Trước", Toast.LENGTH_SHORT).show();
                             } else if (getDSSan().size() == 0) {
-                                Toast.makeText(ThemHoaDonActivity.this, "Bạn Cần Thiết Lập Sân Trước", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ThemPhieuDatSan.this, "Bạn Cần Thiết Lập Sân Trước", Toast.LENGTH_SHORT).show();
                             } else if (a.trim().isEmpty()) {
-                                Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa nhập tên khách hàng xin hãy nhập?", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ThemPhieuDatSan.this, "Bạn chưa nhập tên khách hàng xin hãy nhập?", Toast.LENGTH_SHORT).show();
                             } else if (a.length() < 9 || a.length() > 13 || a.matches(reg)) {
-                                Toast.makeText(ThemHoaDonActivity.this, "Không đúng định dạng số điện thoại vui lòng kiểm tra lại!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ThemPhieuDatSan.this, "Không đúng định dạng số điện thoại vui lòng kiểm tra lại!", Toast.LENGTH_SHORT).show();
                             } else if (t.trim().isEmpty()) {
-                                Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa nhập số điện thoại  khách hàng xin hãy nhập?", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ThemPhieuDatSan.this, "Bạn chưa nhập số điện thoại  khách hàng xin hãy nhập?", Toast.LENGTH_SHORT).show();
                             } else if (b.trim().isEmpty()) {
-                                Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa chọn ngày cho hóa đơn xin hãy chọn?", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ThemPhieuDatSan.this, "Bạn chưa chọn ngày cho hóa đơn xin hãy chọn?", Toast.LENGTH_SHORT).show();
                             } else {
                                 hd = new PhieuDatSan(tenkh1, sdtkh1, masan, tensan, giasan, makg, khunggio, giasan1, edtngay, trangthai1,employeeId);
                                 //Add hd vào database
                                 ApplicationDatabase.getInstance(getApplicationContext()).dao_phieudatsan().insertHOADON(hd);
                                 //View list hd lên màn hình
                                 // Khởi tạo Fragment
-                                Intent intent = new Intent(ThemHoaDonActivity.this, ChiTietPhieuDatSan.class);
+                                Intent intent = new Intent(ThemPhieuDatSan.this, ChiTietPhieuDatSan.class);
                                 startActivity(intent);
                             }
                         } else {
-                            Toast.makeText(ThemHoaDonActivity.this, "Sân đã đặt vui lòng kiểm tra lại: ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ThemPhieuDatSan.this, "Sân đã đặt vui lòng kiểm tra lại: ", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(ThemHoaDonActivity.this, "Bạn Cần Thiết Lập Khung Giờ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ThemPhieuDatSan.this, "Bạn Cần Thiết Lập Khung Giờ", Toast.LENGTH_SHORT).show();
                     }
 
                 } else {
-                    Toast.makeText(ThemHoaDonActivity.this, "Bạn Cần Thiết Lập Sân ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ThemPhieuDatSan.this, "Bạn Cần Thiết Lập Sân ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

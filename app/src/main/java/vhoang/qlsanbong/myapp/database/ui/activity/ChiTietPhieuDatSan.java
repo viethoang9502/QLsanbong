@@ -95,7 +95,7 @@ public class ChiTietPhieuDatSan extends AppCompatActivity {
         floatCs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChiTietPhieuDatSan.this, ThemHoaDonActivity.class));
+                startActivity(new Intent(ChiTietPhieuDatSan.this, ThemPhieuDatSan.class));
 
             }
         });

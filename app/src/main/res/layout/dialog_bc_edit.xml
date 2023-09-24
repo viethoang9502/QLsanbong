@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".database.ui.activity.ThemHoaDonActivity">
+    tools:context=".database.ui.activity.ThemPhieuDatSan">
 
     <LinearLayout
         android:layout_height="35dp"

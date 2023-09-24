@@ -23,7 +23,7 @@ import vhoang.qlsanbong.myapp.database.ui.adapter.AdapterListView_HoaDon;
 import vhoang.qlsanbong.myapp.database.entities.PhieuDatSan;
 import vhoang.qlsanbong.myapp.database.ApplicationDatabase;
 
-public class HoaDonHomNay extends AppCompatActivity {
+public class Phieuchuathanhtoan extends AppCompatActivity {
     ListView lisCs;
     FloatingActionButton floatCs;
     EditText tvtentimkiem;
@@ -54,7 +54,7 @@ public class HoaDonHomNay extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 hd = listhoadon.get(i);
 
-                    Dialog dialog = new Dialog(HoaDonHomNay.this);
+                    Dialog dialog = new Dialog(Phieuchuathanhtoan.this);
                     dialog.setContentView(R.layout.dialog_hoadon_chitiet1);
                     TextView tvtenkh = (TextView) dialog.findViewById(R.id.tenchitiet);
                     TextView tvsdtkh = (TextView) dialog.findViewById(R.id.sdtchitiet);
@@ -70,17 +70,17 @@ public class HoaDonHomNay extends AppCompatActivity {
                     tensan.setText(hd.getTensan());
                     tongtien.setText(String.valueOf(hd.getTongtien()));
                     trangthai.setText(hd.getTrangthai());
-                    Toast.makeText(HoaDonHomNay.this, "Bạn đang xem hóa đơn khách hàng: " + hd.getTenkh(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Phieuchuathanhtoan.this, "Bạn đang xem hóa đơn khách hàng: " + hd.getTenkh(), Toast.LENGTH_SHORT).show();
                     dialog.show();
 
             }
         });
-        listhoadon = (ArrayList<PhieuDatSan>) ApplicationDatabase.getInstance(HoaDonHomNay.this).dao_phieudatsan().gettten(simpleDateFormat.format(c.getTime()));
+        listhoadon = (ArrayList<PhieuDatSan>) ApplicationDatabase.getInstance(Phieuchuathanhtoan.this).dao_phieudatsan().gettten(simpleDateFormat.format(c.getTime()));
         loadData();
     }
     public void loadData() {
         Calendar c = Calendar.getInstance();
-        listhoadon = (ArrayList<PhieuDatSan>) ApplicationDatabase.getInstance(HoaDonHomNay.this).dao_phieudatsan().gettten(simpleDateFormat.format(c.getTime()));
+        listhoadon = (ArrayList<PhieuDatSan>) ApplicationDatabase.getInstance(Phieuchuathanhtoan.this).dao_phieudatsan().gettten(simpleDateFormat.format(c.getTime()));
 
         // Chỉ lấy ra các hóa đơn có trạng thái là "Đã Thanh Toán"
         ArrayList<PhieuDatSan> filteredList = new ArrayList<>();
@@ -90,7 +90,7 @@ public class HoaDonHomNay extends AppCompatActivity {
             }
         }
 
-        adapterListView_hoaDon = new AdapterListView_HoaDon(HoaDonHomNay.this, this::loadData);
+        adapterListView_hoaDon = new AdapterListView_HoaDon(Phieuchuathanhtoan.this, this::loadData);
         adapterListView_hoaDon.setdata(filteredList);  // Sử dụng danh sách đã lọc
         lisCs.setAdapter(adapterListView_hoaDon);
     }

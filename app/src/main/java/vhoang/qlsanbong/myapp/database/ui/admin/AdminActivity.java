@@ -17,7 +17,7 @@ import vhoang.qlsanbong.myapp.R;
 import vhoang.qlsanbong.myapp.database.ui.activity.DSNhanVien;
 import vhoang.qlsanbong.myapp.database.ui.activity.DSSan;
 import vhoang.qlsanbong.myapp.database.ui.activity.DoanhThuNgay;
-import vhoang.qlsanbong.myapp.database.ui.activity.HoaDonHomNay;
+import vhoang.qlsanbong.myapp.database.ui.activity.Phieuchuathanhtoan;
 import vhoang.qlsanbong.myapp.database.ui.activity.KhungGio;
 import vhoang.qlsanbong.myapp.database.ui.activity.ChiTietPhieuDatSan;
 import vhoang.qlsanbong.myapp.database.ui.activity.TimKiem;
@@ -155,7 +155,7 @@ public class AdminActivity extends AppCompatActivity {
         hoadonhomnay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminActivity.this, HoaDonHomNay.class);
+                Intent intent = new Intent(AdminActivity.this, Phieuchuathanhtoan.class);
                 startActivity(intent);
             }
         });

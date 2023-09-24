@@ -34,7 +34,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".database.ui.activity.HoaDonHomNay"
+            android:name=".database.ui.activity.Phieuchuathanhtoan"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -76,7 +76,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".database.ui.activity.ThemHoaDonActivity"
+            android:name=".database.ui.activity.ThemPhieuDatSan"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
