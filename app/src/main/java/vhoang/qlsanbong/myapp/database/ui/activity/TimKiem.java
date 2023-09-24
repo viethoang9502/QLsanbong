@@ -52,10 +52,7 @@ public class TimKiem extends AppCompatActivity {
         list = findViewById(R.id.lis_timkiemhoadon);
         tvngaythue = findViewById(R.id.tvngaytimkiem);
         spnkhungio =findViewById(R.id.spntimkiemkhunggio);
-        spntthd  =findViewById(R.id.spntrangthaitimkiem);
         imgkhunggio =findViewById(R.id.imgtimkiemkhunggio);
-        imgtthd = findViewById(R.id.timkiemtrangthai);
-
         imgkhunggio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
