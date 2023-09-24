@@ -85,7 +85,7 @@ public class HoaDonHomNay extends AppCompatActivity {
         // Chỉ lấy ra các hóa đơn có trạng thái là "Đã Thanh Toán"
         ArrayList<PhieuDatSan> filteredList = new ArrayList<>();
         for (PhieuDatSan hoadon : listhoadon) {
-            if (hoadon.getTrangthai().equals("Đã Thanh Toán")) {
+            if (hoadon.getTrangthai().equals("Chưa Thanh Toán")) {
                 filteredList.add(hoadon);
             }
         }
